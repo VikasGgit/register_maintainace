@@ -39,7 +39,7 @@ const Sidebar = () => {
 
     const handleLogout= async()=>{
     
-         await axios.get("http://localhost:4000/api/v2/admin/logout" ,{withCredentials: true})
+         await axios.get("https://rm-backend-qls2.onrender.com/api/v2/admin/logout" ,{withCredentials: true})
          .then((res)=>{
             toast.success(res.data.message)
             setIsAuthenticated(false);

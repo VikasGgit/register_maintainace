@@ -35,7 +35,7 @@ const Dashboard = () => {
 
   const handleAppDepart= async (appointmentId, departed)=>{
       try{
-        const response = await axios.put(`http://localhost:4000/api/v2/appointment/update/${appointmentId}`,{departed_time},{withCredentials: true});;
+        const response = await axios.put(`https://rm-backend-qls2.onrender.com/api/v2/appointment/update/${appointmentId}`,{departed_time},{withCredentials: true});;
         setAppointments((prev) => {
   return prev.map((appoint) => {
     return appoint._id === appointmentId ? { ...appoint, departed_time:departed } : appoint;
